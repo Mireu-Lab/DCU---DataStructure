@@ -21,5 +21,7 @@ int main() {
                 payData[a].Pay
             );
     }
+    
+    return 0
 }
 
