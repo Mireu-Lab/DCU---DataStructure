@@ -1,49 +1,48 @@
-int insertElement(int L[], int n, int x) {
+#include <stdio.h>
+
+int insertElement(int List[], int Num, int x) {
     int i, k = 0, move = 0;
 
-    for (i = 0; i < n; i++) {
-        if (L[i] <= x && x <= L[i + 1]) {
+    for (i = 0; i < Num; i++) {
+        if (List[i] <= x && x <= List[i + 1]) {
             k = i + 1;
             break;
         }
     }
-    if (i == n) k = n;
+    if (i == Num) k = Num;
 
-    for (i = n; i > k; i--) {
-        L[i] = L[i - 1];
+    for (i = Num; i > k; i--) {
+        List[i] = List[i - 1];
         move++;
     }
 
-    L[k] = x;
+    List[k] = x;
     return move;
 }
 
-int deleteElement(int L[], int n, int x) {
-    int i, k = n, move = 0;
+int deleteElement(int List[], int Num, int x) {
+    int i, k = Num, move = 0;
 
-    for (i = 0; i < n; i++) {
-        if (L[i] == x) {
+    for (i = 0; i < Num; i++) {
+        if (List[i] == x) {
             k = i;
             break;
         }
     }
 
-    if (i == n) move = n;
+    if (i == Num) move = Num;
 
-    for (i = k; i < n - 1; i++) {
-        L[i] = L[i + 1];
+    for (i = k; i < Num - 1; i++) {
+        List[i] = List[i + 1];
         move++;
     }
 
     return move;
 }
 
-#include <stdio.h>
-
-
 int main() {
     int list[TMP_MAX] = {10, 20, 40, 50, 60, 70};
-    int i, move, size = 6;  // size는 리스트에 있는 원소의 개수
+    int i, move, size = 6;
 
     printf("\n삽입 전 선형 리스트 : ");
     for (i = 0; i < size; i++) {
