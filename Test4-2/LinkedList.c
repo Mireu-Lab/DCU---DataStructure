@@ -9,7 +9,7 @@ linkedList_h *createLinkedList_h(void) {
 
   L = (linkedList_h *)malloc(sizeof(linkedList_h));
   L->head = NULL;
-  
+
   return L;
 }
 

@@ -1,5 +1,5 @@
-#include "Test4-2/LinkedList.h"
 #include "Test4-2/LinkedList.c"
+#include "Test4-2/LinkedList.h"
 #include <stdio.h>
 #include <stdlib.h>
 
