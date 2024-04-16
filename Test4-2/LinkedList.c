@@ -1,13 +1,15 @@
 #define _CRT_SECURE_NO_WARNINGS
-#include "Test4-2/LinkedList.h"
+#include "LinkedList.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
 linkedList_h *createLinkedList_h(void) {
   linkedList_h *L;
+
   L = (linkedList_h *)malloc(sizeof(linkedList_h));
   L->head = NULL;
+  
   return L;
 }
 
